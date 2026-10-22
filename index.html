@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tayyab Faisal — Full-Stack Web Developer | Cinematic Portfolio</title>
+  <meta name="description" content="Official cinematic developer portfolio of Tayyab Faisal, Full-Stack Web Developer in Karachi, Pakistan. Specializing in HTML5, CSS3, JavaScript, Bootstrap 5, PHP, Laravel, MySQL, and Java.">
+  <meta name="keywords" content="Tayyab Faisal, Full-Stack Developer, Web Developer Karachi, PHP, Laravel, MySQL, Java, JavaScript, Bootstrap 5, Aptech ACCP AI">
+  <meta name="author" content="Tayyab Faisal">
+
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tayyab Faisal — Full-Stack Web Developer">
+  <meta property="og:description" content="Cinematic portfolio showcasing verified web applications, full-stack systems engineering, and recruiter-focused credentials.">
+  <meta property="og:image" content="assets/images/TF-logo-original.png">
+
+  <!-- Favicon (Original TF Logo) -->
+  <link rel="icon" type="image/png" href="assets/images/TF-logo-original.png">
+
+  <!-- Prevent Theme Flash -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('tayyab_portfolio_theme');
+      if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body class="loading-locked">
+
+  <!-- Subtle Desktop Cursor Glow Aura -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ========================================================================
+       PHASE 4: CUSTOM CIRCULAR PRELOADER
+       ======================================================================== -->
+  <aside id="custom-preloader" class="custom-preloader" aria-label="Loading Experience">
+    <div class="preloader-center-stage">
+      <!-- Concentric Rotating Neon Rings -->
+      <div class="preloader-neon-ring ring-cyan"></div>
+      <div class="preloader-neon-ring ring-purple"></div>
+
+      <!-- SVG Circular Progress Indicator -->
+      <svg class="preloader-svg-ring" viewBox="0 0 200 200">
+        <defs>
+          <linearGradient id="cyanPurpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00f5ff" />
+            <stop offset="100%" stop-color="#a855f7" />
+          </linearGradient>
+        </defs>
+        <circle class="progress-track" cx="100" cy="100" r="94" />
+        <circle id="preloader-progress-circle" class="progress-fill" cx="100" cy="100" r="94" />
+      </svg>
+
+      <!-- Original TF Logo (Preserved) -->
+      <div class="preloader-logo-frame">
+        <img src="assets/images/TF-logo-original.png" alt="Tayyab Faisal Original Brand Logo" class="preloader-logo-img">
+      </div>
+    </div>
+
+    <!-- Preloader Progress & Brand Typography -->
+    <div class="preloader-meta">
+      <div class="preloader-percent-badge"><span id="preloader-percent">0</span>%</div>
+      <div class="preloader-brand-title">TAYYAB FAISAL</div>
+      <div class="preloader-brand-subtitle">FULL-STACK DEVELOPER</div>
+      <div class="preloader-status-ticker" id="preloader-status-text">INITIALIZING CINEMATIC ENGINE...</div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       PHASE 5: PREMIUM FLOATING NAVBAR
+       ======================================================================== -->
+  <nav class="main-navbar" aria-label="Main Navigation">
+    <div class="navbar-inner">
+      <!-- Brand Logo Link -->
+      <a href="#hero" class="brand-link" aria-label="Tayyab Faisal Portfolio Home">
+        <div class="brand-emblem-wrap">
+          <img src="assets/images/TF-logo-original.png" alt="TF Logo" class="brand-emblem-img">
+        </div>
+        <div class="brand-text-block">
+          <span class="brand-name">Tayyab Faisal</span>
+          <span class="brand-role-mini">Full-Stack Dev</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links with Gliding Indicator -->
+      <div class="nav-links-wrap d-none d-lg-block">
+        <ul class="nav-links-desktop">
+          <div id="nav-active-indicator" class="nav-active-pill"></div>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions-group">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="btn-theme-toggle" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <i id="theme-icon" class="bi bi-sun-fill"></i>
+        </button>
+
+        <!-- CV Download Action -->
+        <a href="assets/cv/Tayyab_Faisal_Resume.pdf" download="Tayyab_Faisal_Resume.pdf" class="btn-nav-cv d-none d-sm-inline-flex" title="Download Verified Resume PDF">
+          <i class="bi bi-file-earmark-arrow-down-fill"></i>
+          <span>Download CV</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="btn-mobile-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer Menu -->
+  <aside id="mobile-drawer" class="mobile-drawer" aria-label="Mobile Navigation Menu">
+    <div class="drawer-header">
+      <div class="brand-link">
+        <div class="brand-emblem-wrap" style="width:36px;height:36px;">
+          <img src="assets/images/TF-logo-original.png" alt="TF Logo" class="brand-emblem-img">
+        </div>
+        <span class="brand-name">Tayyab Faisal</span>
+      </div>
+      <button id="drawer-close" class="drawer-close-btn" aria-label="Close navigation menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Technical Skills</a></li>
+      <li><a href="#projects">Featured Projects</a></li>
+      <li><a href="#experience">Commercial Experience</a></li>
+      <li><a href="#education">Education &amp; Studies</a></li>
+      <li><a href="#resume">Resume &amp; Credentials</a></li>
+      <li><a href="#contact">Contact &amp; Inquiries</a></li>
+    </ul>
+    <div class="mt-auto pt-4 border-top border-secondary border-opacity-25 d-flex flex-column gap-2">
+      <a href="assets/cv/Tayyab_Faisal_Resume.pdf" download="Tayyab_Faisal_Resume.pdf" class="btn-primary-glow justify-content-center">
+        <i class="bi bi-file-earmark-arrow-down-fill"></i> Download CV (PDF)
+      </a>
+      <a href="cv.html" class="btn-secondary-glass justify-content-center">
+        <i class="bi bi-printer-fill"></i> View Printable CV
+      </a>
+    </div>
+  </aside>
+  <div id="drawer-backdrop" class="drawer-backdrop"></div>
+
+  <!-- ========================================================================
+       PHASE 3: CINEMATIC FULL-SCREEN HERO
+       ======================================================================== -->
+  <header id="hero" class="hero-pinned-wrapper">
+    <div id="hero-scroll-track" class="hero-sticky-stage">
+      <!-- High-Performance Frame Canvas (596-frame 60 fps sequence) -->
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+      <!-- Cinematic Vignette & Ambient Gradient Overlays -->
+      <div class="hero-vignette-overlay"></div>
+
+      <!-- Real-time Scene Progress Telemetry Pill -->
+      <div id="hero-progress-pill" class="hero-progress-pill">SCENE PROGRESS: 0%</div>
+
+      <!-- Hero Copy & Call-To-Action Stage -->
+      <div class="hero-content-stage">
+        <div id="hero-main-content" class="hero-text-card">
+          <div class="hero-badge-pill">
+            <span class="status-dot-green"></span>
+            <span>Full-Stack Web Developer • Karachi, Pakistan</span>
+          </div>
+
+          <h1 class="hero-name-title">
+            TAYYAB <span class="text-gradient-cyan-purple">FAISAL</span>
+          </h1>
+
+          <div class="hero-subtitle-role">
+            Full-Stack Web Developer
+          </div>
+
+          <p class="hero-lead-paragraph">
+            Engineering scalable web applications, robust backends, and responsive digital interfaces with <strong>PHP, Laravel, MySQL, Java</strong>, and modern JavaScript. Advancing in <strong>ACCP AI</strong> at APTECH with disciplined commercial accuracy.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#projects" class="btn-primary-glow">
+              <i class="bi bi-collection-play-fill"></i>
+              <span>Explore My Work</span>
+            </a>
+            <a href="assets/cv/Tayyab_Faisal_Resume.pdf" download="Tayyab_Faisal_Resume.pdf" class="btn-secondary-glass">
+              <i class="bi bi-file-earmark-arrow-down-fill"></i>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <!-- Verified Channels -->
+          <div class="hero-social-pills">
+            <a href="https://github.com/tayyab3333uk-cpu" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub Profile">
+              <i class="bi bi-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/tayyab-faisal-25532b378" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn Profile">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://wa.me/923348275259?text=Hi%20Tayyab,%20I%20viewed%20your%20cinematic%20developer%20portfolio!" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp Chat">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+            <a href="mailto:tayyab3333.uk@gmail.com" class="social-icon-btn" title="Email Direct">
+              <i class="bi bi-envelope-fill"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Scroll Cue -->
+      <div id="hero-scroll-cue" class="hero-scroll-cue">
+        <span class="scroll-cue-text">SCROLL TO EXPERIENCE</span>
+        <div class="scroll-mouse-icon">
+          <div class="scroll-mouse-wheel"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         PHASE 8.A: ABOUT ME SECTION
+         ======================================================================== -->
+    <section id="about" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 01. ABOUT ME</div>
+        <h2 class="section-heading">Bridging Technical Rigor &amp; <span class="text-gradient-cyan-purple">Modern Web Craft</span></h2>
+        <p class="section-desc">
+          A developer grounded in clean architecture, database integrity, and practical project delivery.
+        </p>
+
+        <div class="about-grid">
+          <!-- Profile Card with Real Portrait -->
+          <div class="glass-card about-profile-card tilt-card reveal-on-scroll">
+            <div class="about-portrait-wrap">
+              <img src="assets/images/tayyab-about.png" onerror="this.onerror=null; this.src='assets/images/placeholder-avatar.svg';" alt="Tayyab Faisal — Full-Stack Web Developer" class="about-portrait-img">
+            </div>
+            <h3 class="about-name">Tayyab Faisal</h3>
+            <span class="about-role-tag">&lt;Full-Stack Web Developer /&gt;</span>
+
+            <ul class="about-facts-list">
+              <li class="about-fact-item">
+                <i class="bi bi-geo-alt-fill"></i>
+                <span>Karachi, Pakistan</span>
+              </li>
+              <li class="about-fact-item">
+                <i class="bi bi-mortarboard-fill"></i>
+                <span>ACCP AI @ APTECH (1 Yr Done)</span>
+              </li>
+              <li class="about-fact-item">
+                <i class="bi bi-briefcase-fill"></i>
+                <span>Seeking Internship / Junior Roles</span>
+              </li>
+              <li class="about-fact-item">
+                <i class="bi bi-translate"></i>
+                <span>English &amp; Urdu (Fluent)</span>
+              </li>
+              <li class="about-fact-item">
+                <i class="bi bi-patch-check-fill text-success"></i>
+                <span>Verified Repositories &amp; Demos</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Professional Narrative & Background -->
+          <div class="glass-card about-narrative-card reveal-on-scroll">
+            <p class="about-story-text">
+              I am a dedicated web developer focused on building applications that combine intuitive user interfaces with clean, maintainable backend architecture. My technical journey encompasses hands-on engineering across modern frontend technologies (HTML5, CSS3, JavaScript, Bootstrap 5) alongside structured server development in <strong>PHP and Laravel</strong> and relational database design with <strong>MySQL</strong>.
+            </p>
+            <p class="about-story-text">
+              Currently, I am completing the comprehensive <strong>ACCP AI (Aptech Certified Computer Professional in Artificial Intelligence)</strong> program at APTECH Computer Education. Having completed one year with two years remaining, my academic focus emphasizes object-oriented programming in <strong>Java</strong>, software engineering lifecycles, and relational database systems.
+            </p>
+
+            <div class="about-highlight-box">
+              <div class="about-highlight-title">
+                <i class="bi bi-shield-check text-info"></i> Commercial Operations Background
+              </div>
+              <p class="mb-0" style="font-size:0.92rem; color:var(--text-secondary); line-height:1.65;">
+                Prior to transitioning fully into software development, I completed <strong>six months in the Accounts Department at Reliable Ship Supply</strong>. This role was non-technical, but it gave me an invaluable foundation: precision in numerical documentation, invoice auditing, zero-error tolerance, and structured ledger administration. I channel this exact discipline into writing reliable code and bug-free database schemas.
+              </p>
+            </div>
+
+            <p class="about-story-text">
+              <strong>Career Objective:</strong> I am actively seeking an internship or junior web developer role in a professional software house in Karachi or a collaborative remote team. My priority is contributing immediately to real codebases, learning from experienced senior engineers, and delivering responsive, production-ready web systems.
+            </p>
+
+            <!-- Metrics Row -->
+            <div class="about-metrics-row">
+              <div class="metric-pill">
+                <div class="metric-value">3+</div>
+                <div class="metric-label">Live Verified Web Projects</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-value">1+ Yr</div>
+                <div class="metric-label">Formal Aptech ACCP AI Study</div>
+              </div>
+              <div class="metric-pill">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Recruiter &amp; Technical Honesty</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHASE 8.B: TECHNICAL SKILLS SECTION
+         ======================================================================== -->
+    <section id="skills" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 02. TECHNICAL SKILLS</div>
+        <h2 class="section-heading">Verified Technologies &amp; <span class="text-gradient-cyan-purple">Tooling</span></h2>
+        <p class="section-desc">
+          Organized into clean, responsive categories. Every listed technology is verified through hands-on coursework and deployed projects without inflated ratings.
+        </p>
+
+        <div class="skills-grid">
+          <!-- 1. Frontend Development -->
+          <div class="glass-card skill-category-card tilt-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i class="bi bi-window-desktop"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Frontend Development</h3>
+                <span class="category-subtitle">Responsive UI/UX &amp; Modern Styling</span>
+              </div>
+            </div>
+            <div class="skill-badges-flow">
+              <span class="tech-badge-item"><i class="bi bi-filetype-html text-danger"></i> HTML5</span>
+              <span class="tech-badge-item"><i class="bi bi-filetype-css text-primary"></i> CSS3</span>
+              <span class="tech-badge-item"><i class="bi bi-filetype-js text-warning"></i> JavaScript</span>
+              <span class="tech-badge-item"><i class="bi bi-bootstrap-fill text-purple"></i> Bootstrap 5</span>
+            </div>
+            <p class="skill-summary-copy">
+              Semantic markup, W3C accessibility compliance, Flexbox &amp; CSS Grid architectures, DOM manipulation, asynchronous Fetch API, and mobile-first responsive interfaces.
+            </p>
+          </div>
+
+          <!-- 2. Programming Languages -->
+          <div class="glass-card skill-category-card tilt-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box" style="color:var(--accent-purple); border-color:rgba(168,85,247,0.3);">
+                <i class="bi bi-code-square"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Programming Languages</h3>
+                <span class="category-subtitle">Object-Oriented Logic &amp; Architecture</span>
+              </div>
+            </div>
+            <div class="skill-badges-flow">
+              <span class="tech-badge-item"><i class="bi bi-cup-hot-fill text-danger"></i> Java</span>
+              <span class="tech-badge-item"><i class="bi bi-filetype-php text-primary"></i> PHP</span>
+            </div>
+            <p class="skill-summary-copy">
+              Core OOP paradigms (encapsulation, inheritance, polymorphism, abstraction), algorithmic problem solving, structured logic, and server-side data processing.
+            </p>
+          </div>
+
+          <!-- 3. Backend & Framework -->
+          <div class="glass-card skill-category-card tilt-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box" style="color:#6366f1; border-color:rgba(99,102,241,0.3);">
+                <i class="bi bi-server"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Backend &amp; Framework</h3>
+                <span class="category-subtitle">Server Architecture &amp; REST APIs</span>
+              </div>
+            </div>
+            <div class="skill-badges-flow">
+              <span class="tech-badge-item"><i class="bi bi-boxes text-danger"></i> Laravel</span>
+              <span class="tech-badge-item"><i class="bi bi-shield-lock-fill text-success"></i> RESTful APIs</span>
+            </div>
+            <p class="skill-summary-copy">
+              MVC application design, routing pipelines, Blade templating, Eloquent ORM database operations, input sanitization, and structured API responses.
+            </p>
+          </div>
+
+          <!-- 4. Database & SQL -->
+          <div class="glass-card skill-category-card tilt-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box" style="color:#06b6d4; border-color:rgba(6,182,212,0.3);">
+                <i class="bi bi-database-fill-gear"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Database &amp; Data Modeling</h3>
+                <span class="category-subtitle">Relational Schema Integrity</span>
+              </div>
+            </div>
+            <div class="skill-badges-flow">
+              <span class="tech-badge-item"><i class="bi bi-database-check text-info"></i> MySQL</span>
+              <span class="tech-badge-item"><i class="bi bi-table text-warning"></i> SQL Queries</span>
+            </div>
+            <p class="skill-summary-copy">
+              Relational table schemas, primary and foreign key constraints, table normalization, inner/outer joins, indexing, and transactional consistency.
+            </p>
+          </div>
+
+          <!-- 5. Developer Tools & CMS -->
+          <div class="glass-card skill-category-card tilt-card reveal-on-scroll">
+            <div class="category-header">
+              <div class="category-icon-box" style="color:#10b981; border-color:rgba(16,185,129,0.3);">
+                <i class="bi bi-tools"></i>
+              </div>
+              <div>
+                <h3 class="category-title">Tools &amp; Platforms</h3>
+                <span class="category-subtitle">Productivity &amp; Deployment</span>
+              </div>
+            </div>
+            <div class="skill-badges-flow">
+              <span class="tech-badge-item"><i class="bi bi-git text-danger"></i> Git</span>
+              <span class="tech-badge-item"><i class="bi bi-github"></i> GitHub</span>
+              <span class="tech-badge-item"><i class="bi bi-code-slash text-info"></i> VS Code</span>
+              <span class="tech-badge-item"><i class="bi bi-hdd-network text-warning"></i> XAMPP</span>
+              <span class="tech-badge-item"><i class="bi bi-wordpress text-primary"></i> WordPress</span>
+            </div>
+            <p class="skill-summary-copy">
+              Version control branching and pull requests, Apache &amp; MySQL local environments, modern IDE extensions, and WordPress deployment configuration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHASE 8.C: FEATURED PROJECTS SECTION
+         ======================================================================== -->
+    <section id="projects" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 03. FEATURED WORK</div>
+        <h2 class="section-heading">Verified <span class="text-gradient-cyan-purple">Production Projects</span></h2>
+        <p class="section-desc">
+          Explore real web applications built with clean code, responsive layouts, interactive JavaScript, and live GitHub Pages deployments.
+        </p>
+
+        <div class="projects-grid">
+          <!-- Project 1: AURA Watches -->
+          <article class="glass-card project-card tilt-card reveal-on-scroll">
+            <div class="project-image-box">
+              <img src="assets/images/project-aura-live.png" alt="Aura Watches — Luxury Timepieces Platform" class="project-screenshot" loading="lazy">
+              <span class="project-category-tag"><i class="bi bi-gem me-1"></i> Luxury E-Commerce</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AURA Watches</h3>
+              <p class="project-desc">
+                An immersive luxury timepiece showcase website engineered with a bespoke black-and-gold visual theme. Features an interactive live quartz clock engine, dynamic product catalog filters, modal previews, and a responsive Bootstrap 5 layout.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">Bootstrap 5</span>
+                <span class="tech-tag-pill">JavaScript</span>
+                <span class="tech-tag-pill">jQuery</span>
+                <span class="tech-tag-pill">FontAwesome</span>
+                <span class="tech-tag-pill">Live Clock Engine</span>
+              </div>
+              <div class="project-links-row">
+                <a href="https://tayyab3333uk-cpu.github.io/AURA---WATCHES-/" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+                <a href="https://github.com/tayyab3333uk-cpu/AURA---WATCHES-" target="_blank" rel="noopener noreferrer" class="btn-project-code">
+                  <i class="bi bi-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Reely Gaming Devices -->
+          <article class="glass-card project-card tilt-card reveal-on-scroll">
+            <div class="project-image-box">
+              <img src="assets/images/project-gaming-live.png" alt="Reely — Gaming Devices & Workstation Hub" class="project-screenshot" loading="lazy">
+              <span class="project-category-tag"><i class="bi bi-controller me-1"></i> Hardware Hub</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Reely. — Gaming &amp; Workstations</h3>
+              <p class="project-desc">
+                A high-contrast, responsive tech portal designed for custom gaming rigs, workstation PCs, laptops, and computer peripherals. Features smooth Animate On Scroll (AOS) transitions, multi-level dropdown category navigation, and responsive card layouts.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">HTML5 / CSS3</span>
+                <span class="tech-tag-pill">Bootstrap</span>
+                <span class="tech-tag-pill">AOS Library</span>
+                <span class="tech-tag-pill">Line Awesome</span>
+                <span class="tech-tag-pill">Responsive UI</span>
+              </div>
+              <div class="project-links-row">
+                <a href="https://tayyab3333uk-cpu.github.io/Gaming-Devices-.com/" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+                <a href="https://github.com/tayyab3333uk-cpu/Gaming-Devices-.com" target="_blank" rel="noopener noreferrer" class="btn-project-code">
+                  <i class="bi bi-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: PakCivic -->
+          <article class="glass-card project-card tilt-card reveal-on-scroll">
+            <div class="project-image-box">
+              <img src="assets/images/project-civic-live.png" alt="PakCivic — Pakistan Civic Issues Awareness Platform" class="project-screenshot" loading="lazy">
+              <span class="project-category-tag"><i class="bi bi-globe-americas me-1"></i> Civic Platform</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">PakCivic — Civic Issues Platform</h3>
+              <p class="project-desc">
+                A dedicated public awareness platform highlighting systemic infrastructure challenges across Pakistan (load shedding, clean water scarcity, air quality). Includes active crisis index telemetry bars, citizen issue reporting workflows, and community solution indexes.
+              </p>
+              <div class="project-tech-tags">
+                <span class="tech-tag-pill">Semantic HTML5</span>
+                <span class="tech-tag-pill">CSS Grid/Flexbox</span>
+                <span class="tech-tag-pill">JavaScript</span>
+                <span class="tech-tag-pill">Telemetry UI</span>
+                <span class="tech-tag-pill">Accessible Form</span>
+              </div>
+              <div class="project-links-row">
+                <a href="https://tayyab3333uk-cpu.github.io/Pakistan-Social-issues/" target="_blank" rel="noopener noreferrer" class="btn-project-live">
+                  <i class="bi bi-box-arrow-up-right"></i> Live Demo
+                </a>
+                <a href="https://github.com/tayyab3333uk-cpu/Pakistan-Social-issues" target="_blank" rel="noopener noreferrer" class="btn-project-code">
+                  <i class="bi bi-github"></i> Source
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHASE 8.D: PROFESSIONAL EXPERIENCE SECTION
+         ======================================================================== -->
+    <section id="experience" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 04. EXPERIENCE</div>
+        <h2 class="section-heading">Commercial Operations &amp; <span class="text-gradient-cyan-purple">Background</span></h2>
+        <p class="section-desc">
+          A transparent record of my corporate commercial experience, highlighting operational discipline, mathematical accuracy, and organizational responsibility.
+        </p>
+
+        <div class="glass-card timeline-card reveal-on-scroll">
+          <div class="exp-header">
+            <h3 class="exp-role-title">Accounts Department Associate</h3>
+            <span class="exp-duration-badge">6 Months Duration</span>
+          </div>
+
+          <a href="https://reliableshipsupply.com/" target="_blank" rel="noopener noreferrer" class="exp-company-link">
+            <i class="bi bi-building"></i> Reliable Ship Supply, Karachi
+            <i class="bi bi-box-arrow-up-right small"></i>
+          </a>
+
+          <div>
+            <span class="exp-distinction-badge">
+              <i class="bi bi-info-circle-fill me-1"></i> Commercial Accounts Role (Distinguished from Software Development)
+            </span>
+          </div>
+
+          <ul class="exp-bullet-list">
+            <li>
+              <strong>Invoice Processing &amp; Manifest Verification:</strong> Handled cross-verification of supply invoices, procurement manifests, and maritime provisioning vouchers for chandling operations.
+            </li>
+            <li>
+              <strong>Organizing Invoice Records &amp; Archives:</strong> Structured physical and digital invoice archives to ensure immediate accessibility during accounting audits and supplier billing reconciliations.
+            </li>
+            <li>
+              <strong>Daily Accounts Operations:</strong> Assisted the senior accounting team with routine ledger entries, bookkeeping coordination, and supplier balance verifications.
+            </li>
+            <li>
+              <strong>Administrative Responsibility:</strong> Executed administrative accounts workflows under strict deadlines, handling sensitive financial figures with zero tolerance for discrepancies.
+            </li>
+          </ul>
+
+          <div class="exp-transferable-note">
+            <h5><i class="bi bi-arrow-repeat text-info me-1"></i> Transferable Engineering Value</h5>
+            <p>
+              This corporate experience instilled rigorous habits: methodical verification of data inputs, disciplined documentation, and high accountability. These exact habits directly elevate my software engineering practices when designing relational database schemas, sanitizing user inputs, and structuring code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHASE 8.E: EDUCATION SECTION
+         ======================================================================== -->
+    <section id="education" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 05. EDUCATION</div>
+        <h2 class="section-heading">Academic &amp; <span class="text-gradient-cyan-purple">Technical Credentials</span></h2>
+        <p class="section-desc">
+          Formal academic training in computer science fundamentals, web application engineering, and analytical problem solving.
+        </p>
+
+        <div class="education-grid">
+          <!-- Education 1: APTECH ACCP AI -->
+          <div class="glass-card edu-card tilt-card reveal-on-scroll">
+            <span class="edu-badge-status">Current Program • In Progress</span>
+            <h3 class="edu-program-title">ACCP AI (Aptech Certified Computer Professional in Artificial Intelligence)</h3>
+            <div class="edu-institution">
+              <i class="bi bi-mortarboard-fill"></i> APTECH Computer Education
+            </div>
+            <p class="edu-desc">
+              A comprehensive multi-year curriculum spanning modern web application engineering, backend server architectures (PHP/Laravel), relational database systems (MySQL), core object-oriented programming (Java), and emerging artificial intelligence concepts.
+            </p>
+
+            <div class="edu-progress-box">
+              <div class="edu-progress-header">
+                <span class="text-muted">Degree Progress</span>
+                <span class="font-monospace" style="color:var(--accent-cyan); font-weight:600;">1 Year Completed • 2 Years Remaining</span>
+              </div>
+              <div class="edu-progress-track">
+                <div class="edu-progress-bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2: Matriculation -->
+          <div class="glass-card edu-card tilt-card reveal-on-scroll">
+            <span class="edu-badge-status">Completed 2025</span>
+            <h3 class="edu-program-title">Matriculation — Science Group</h3>
+            <div class="edu-institution">
+              <i class="bi bi-award-fill"></i> Board of Secondary Education Karachi (BSEK)
+            </div>
+            <p class="edu-desc">
+              Solid academic grounding in the core sciences with an emphasis on analytical mathematics, computer science fundamentals, and physical sciences. Provided the foundational logic and quantitative reasoning required for algorithmic software development.
+            </p>
+
+            <div class="edu-progress-box">
+              <div class="d-flex flex-wrap gap-2">
+                <span class="tech-tag-pill">Computer Science</span>
+                <span class="tech-tag-pill">Mathematics</span>
+                <span class="tech-tag-pill">Physics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHASE 8.F: RESUME & CV SECTION
+         ======================================================================== -->
+    <section id="resume" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 06. RESUME</div>
+        <h2 class="section-heading">Recruiter Overview &amp; <span class="text-gradient-cyan-purple">Curriculum Vitae</span></h2>
+        <p class="section-desc">
+          Access my clean, ATS-compliant Curriculum Vitae directly formatted for software house hiring committees and technical managers.
+        </p>
+
+        <div class="glass-card resume-banner-card reveal-on-scroll">
+          <div class="resume-left-col">
+            <h3 class="resume-pitch-title">Verified Technical Qualifications</h3>
+            <p class="resume-pitch-lead">
+              My CV documents verified full-stack competencies, live project deployments, formal studies at APTECH Computer Education, and corporate experience at Reliable Ship Supply.
+            </p>
+
+            <ul class="resume-checklist">
+              <li><i class="bi bi-check-circle-fill"></i> Real, generated PDF file with clickable live links and verified contact details</li>
+              <li><i class="bi bi-check-circle-fill"></i> Clean 2-page ATS-optimized format tailored for internship and junior applications</li>
+              <li><i class="bi bi-check-circle-fill"></i> 100% transparent representation of technical skills, experience, and academic standing</li>
+            </ul>
+
+            <div class="resume-buttons-row">
+              <a href="assets/cv/Tayyab_Faisal_Resume.pdf" download="Tayyab_Faisal_Resume.pdf" class="btn-primary-glow">
+                <i class="bi bi-file-earmark-arrow-down-fill"></i> Download Official CV (PDF)
+              </a>
+              <a href="cv.html" class="btn-secondary-glass" target="_blank" rel="noopener">
+                <i class="bi bi-eye-fill"></i> View Printable Web CV
+              </a>
+            </div>
+          </div>
+
+          <!-- Mini Candidate Summary Card -->
+          <div class="resume-preview-card">
+            <div class="preview-candidate-header">
+              <div class="preview-name">Tayyab Faisal</div>
+              <div class="preview-title">Full-Stack Web Developer</div>
+            </div>
+            <div class="preview-data-list">
+              <div><strong>Target Role:</strong> Software House Internship / Junior Web Dev</div>
+              <div><strong>Location:</strong> Karachi, Pakistan</div>
+              <div><strong>Core Stack:</strong> HTML, CSS, JS, Bootstrap, PHP, Laravel, MySQL, Java</div>
+              <div><strong>Education:</strong> Aptech ACCP AI (Year 1 of 3)</div>
+              <div><strong>Direct Line:</strong> 0334-8275259 / tayyab3333.uk@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PHASE 8.G: CONTACT SECTION
+         ======================================================================== -->
+    <section id="contact" class="section-wrapper">
+      <div class="container-custom">
+        <div class="section-eyebrow">// 07. GET IN TOUCH</div>
+        <h2 class="section-heading">Let's Connect &amp; <span class="text-gradient-cyan-purple">Collaborate</span></h2>
+        <p class="section-desc">
+          Interested in interviewing me for an internship or junior developer position? Reach out directly via phone, WhatsApp, email, or send an inquiry below.
+        </p>
+
+        <div class="contact-grid">
+          <!-- Contact Channels Column -->
+          <div class="contact-channels-column">
+            <!-- Email -->
+            <a href="mailto:tayyab3333.uk@gmail.com" class="contact-card-item">
+              <div class="channel-icon-wrap">
+                <i class="bi bi-envelope-at-fill"></i>
+              </div>
+              <div>
+                <div class="channel-title">Email Address</div>
+                <div class="channel-val">tayyab3333.uk@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Direct Phone -->
+            <a href="tel:03348275259" class="contact-card-item">
+              <div class="channel-icon-wrap" style="color:var(--accent-emerald); border-color:rgba(16,185,129,0.3);">
+                <i class="bi bi-telephone-fill"></i>
+              </div>
+              <div>
+                <div class="channel-title">Direct Phone</div>
+                <div class="channel-val">0334-8275259</div>
+              </div>
+            </a>
+
+            <!-- WhatsApp (Verified Number) -->
+            <a href="https://wa.me/923348275259?text=Hi%20Tayyab,%20I%20viewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity!" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+              <div class="channel-icon-wrap" style="color:#25d366; border-color:rgba(37,211,102,0.3);">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <div class="channel-title">WhatsApp Direct</div>
+                <div class="channel-val">+92 334 8275259</div>
+              </div>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/tayyab-faisal-25532b378" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+              <div class="channel-icon-wrap" style="color:#0a66c2; border-color:rgba(10,102,194,0.3);">
+                <i class="bi bi-linkedin"></i>
+              </div>
+              <div>
+                <div class="channel-title">LinkedIn Profile</div>
+                <div class="channel-val">in/tayyab-faisal-25532b378</div>
+              </div>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/tayyab3333uk-cpu" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+              <div class="channel-icon-wrap" style="color:var(--accent-purple); border-color:rgba(168,85,247,0.3);">
+                <i class="bi bi-github"></i>
+              </div>
+              <div>
+                <div class="channel-title">GitHub Repositories</div>
+                <div class="channel-val">github.com/tayyab3333uk-cpu</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Accessible Contact Form -->
+          <div class="glass-card contact-form-card reveal-on-scroll">
+            <h3 class="mb-2" style="font-family:var(--font-heading); font-size:1.35rem; font-weight:700;">Send a Direct Message</h3>
+            <p class="text-muted small mb-4">
+              Fill out the form below. For static GitHub Pages visitors, this provides instant 1-click dispatch via your email client or WhatsApp without simulated backend claims.
+            </p>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group-custom">
+                <label for="contact-name" class="form-label-custom">Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-control-custom" placeholder="e.g. Sarah Jenkins" required>
+                <div class="form-feedback-error" id="feedback-name">Please provide your name.</div>
+              </div>
+
+              <div class="form-group-custom">
+                <label for="contact-email" class="form-label-custom">Email Address *</label>
+                <input type="email" id="contact-email" name="email" class="form-control-custom" placeholder="e.g. sarah@company.com" required>
+                <div class="form-feedback-error" id="feedback-email">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group-custom">
+                <label for="contact-subject" class="form-label-custom">Subject *</label>
+                <input type="text" id="contact-subject" name="subject" class="form-control-custom" placeholder="e.g. Internship Interview Opportunity" required>
+                <div class="form-feedback-error" id="feedback-subject">Please enter a subject.</div>
+              </div>
+
+              <div class="form-group-custom">
+                <label for="contact-message" class="form-label-custom">Message *</label>
+                <textarea id="contact-message" name="message" class="form-control-custom" rows="4" placeholder="Detail your role requirements, project opportunity, or questions..." required></textarea>
+                <div class="form-feedback-error" id="feedback-message">Message must be at least 10 characters.</div>
+              </div>
+
+              <button type="submit" class="btn-primary-glow w-100 justify-content-center" id="contact-submit-btn">
+                <i class="bi bi-send-fill me-2"></i> Submit Inquiry
+              </button>
+            </form>
+
+            <div id="form-status-alert" class="form-status-alert" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       PHASE 8.H: FOOTER
+       ======================================================================== -->
+  <footer class="main-footer">
+    <div class="container-custom">
+      <div class="footer-top-row">
+        <div class="footer-brand-wrap">
+          <img src="assets/images/TF-logo-original.png" alt="TF Logo" class="footer-logo-img">
+          <div>
+            <div class="fw-bold" style="font-family:var(--font-heading); font-size:1.15rem; color:var(--text-primary);">Tayyab Faisal</div>
+            <div class="small text-muted font-monospace">Full-Stack Web Developer • Karachi, Pakistan</div>
+          </div>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="https://github.com/tayyab3333uk-cpu" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/tayyab-faisal-25532b378" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://wa.me/923348275259" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="WhatsApp">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="mailto:tayyab3333.uk@gmail.com" class="social-icon-btn" title="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          &copy; <span id="current-year">2026</span> Tayyab Faisal. All rights reserved. Crafted with semantic HTML5, modern CSS3 &amp; cinematic canvas rendering.
+        </div>
+        <button class="back-to-top-btn" id="back-to-top" aria-label="Back to top of page">
+          <i class="bi bi-arrow-up"></i> Back to Top
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Scripts -->
+  <script src="assets/js/preloader.js"></script>
+  <script src="assets/js/hero-cinematic.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/motion.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+</html>

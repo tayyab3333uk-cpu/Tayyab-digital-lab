@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="civicBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06130e" />
+      <stop offset="100%" stop-color="#0c2219" />
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <radialGradient id="emeraldGlow" cx="60%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="16" fill="url(#civicBg)" stroke="#064e3b" stroke-width="2" />
+  <circle cx="580" cy="240" r="230" fill="url(#emeraldGlow)" />
+
+  <!-- Browser Header bar -->
+  <rect width="800" height="42" rx="16" fill="#061c14" />
+  <rect y="30" width="800" height="12" fill="#061c14" />
+  <circle cx="28" cy="21" r="5" fill="#ef4444" />
+  <circle cx="46" cy="21" r="5" fill="#f59e0b" />
+  <circle cx="64" cy="21" r="5" fill="#10b981" />
+  <!-- URL bar -->
+  <rect x="95" y="10" width="380" height="22" rx="6" fill="#0f291e" />
+  <text x="110" y="25" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="11">https://tayyab3333uk-cpu.github.io/Pakistan-Social-issues/</text>
+  <rect x="710" y="10" width="70" height="22" rx="6" fill="#047857" />
+  <text x="745" y="25" fill="#d1fae5" font-family="sans-serif" font-size="10" text-anchor="middle">LIVE DEMO</text>
+
+  <!-- Website Content Preview -->
+  <!-- Top Navbar -->
+  <rect x="40" y="60" width="720" height="50" rx="8" fill="#072218" stroke="rgba(16,185,129,0.3)" stroke-width="1" />
+  <circle cx="68" cy="85" r="14" fill="#064e3b" />
+  <text x="68" y="90" font-size="14" text-anchor="middle">🌿</text>
+  <text x="92" y="92" font-family="'Inter', sans-serif" font-weight="800" font-size="20" fill="#34d399">PakCivic</text>
+
+  <text x="360" y="90" font-family="'Inter', sans-serif" font-size="12" fill="#10b981" font-weight="bold">Home</text>
+  <text x="430" y="90" font-family="'Inter', sans-serif" font-size="12" fill="#a7f3d0">Issues</text>
+  <text x="500" y="90" font-family="'Inter', sans-serif" font-size="12" fill="#a7f3d0">Report</text>
+  <text x="570" y="90" font-family="'Inter', sans-serif" font-size="12" fill="#a7f3d0">Solutions</text>
+  <rect x="660" y="73" width="85" height="24" rx="4" fill="url(#emeraldGrad)" />
+  <text x="702" y="89" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fff" text-anchor="middle">REPORT ISSUE</text>
+
+  <!-- Hero Content Left -->
+  <g transform="translate(60, 150)">
+    <rect width="210" height="24" rx="12" fill="rgba(16,185,129,0.15)" stroke="rgba(16,185,129,0.4)" stroke-width="1" />
+    <text x="105" y="16" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#34d399" text-anchor="middle" letter-spacing="1">CIVIC AWARENESS INITIATIVE</text>
+
+    <text x="0" y="65" font-family="'Inter', sans-serif" font-weight="800" font-size="32" fill="#ffffff">Your Voice For A</text>
+    <text x="0" y="102" font-family="'Inter', sans-serif" font-weight="800" font-size="32" fill="#34d399">Better Pakistan</text>
+    <text x="0" y="136" font-family="'Inter', sans-serif" font-size="13" fill="#a7f3d0">Track load shedding, water shortages, clean air crisis,</text>
+    <text x="0" y="156" font-family="'Inter', sans-serif" font-size="13" fill="#a7f3d0">and empower community-driven civic solutions.</text>
+
+    <!-- Buttons -->
+    <rect x="0" y="180" width="140" height="38" rx="6" fill="url(#emeraldGrad)" />
+    <text x="70" y="204" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#fff" text-anchor="middle">📝 REPORT ISSUE</text>
+    <rect x="155" y="180" width="130" height="38" rx="6" fill="transparent" stroke="#34d399" stroke-width="1.5" />
+    <text x="220" y="204" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#34d399" text-anchor="middle">VIEW ALL ISSUES →</text>
+  </g>
+
+  <!-- Right Visual: Active Crisis Index Telemetry Box -->
+  <g transform="translate(490, 140)">
+    <rect x="0" y="0" width="260" height="240" rx="12" fill="#041a12" stroke="#059669" stroke-width="1.5" />
+    <text x="20" y="32" font-family="'Inter', sans-serif" font-weight="700" font-size="12" fill="#a7f3d0">⚡ ACTIVE CRISIS INDEX (2024)</text>
+
+    <!-- Bar 1: Load Shedding 92% -->
+    <text x="20" y="70" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Load Shedding</text>
+    <text x="235" y="70" font-family="'JetBrains Mono', monospace" font-size="11" fill="#ef4444" text-anchor="end">92%</text>
+    <rect x="20" y="80" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="20" y="80" width="202" height="8" rx="4" fill="#ef4444" />
+
+    <!-- Bar 2: Water Shortage 78% -->
+    <text x="20" y="120" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Water Shortage</text>
+    <text x="235" y="120" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8" text-anchor="end">78%</text>
+    <rect x="20" y="130" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="20" y="130" width="171" height="8" rx="4" fill="#38bdf8" />
+
+    <!-- Bar 3: Air Pollution 70% -->
+    <text x="20" y="170" font-family="'Inter', sans-serif" font-size="11" fill="#e2e8f0">Air Pollution (AQI)</text>
+    <text x="235" y="170" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f59e0b" text-anchor="end">70%</text>
+    <rect x="20" y="180" width="220" height="8" rx="4" fill="#1e293b" />
+    <rect x="20" y="180" width="154" height="8" rx="4" fill="#f59e0b" />
+
+    <!-- Status badge -->
+    <rect x="20" y="206" width="220" height="20" rx="4" fill="#064e3b" />
+    <text x="130" y="220" font-family="'Inter', sans-serif" font-size="10" fill="#a7f3d0" text-anchor="middle">🟢 Telemetry Live • Civic Verified</text>
+  </g>
+
+  <!-- Tag Pills footer -->
+  <g transform="translate(50, 445)">
+    <rect width="90" height="26" rx="6" fill="#06281e" />
+    <text x="45" y="17" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">HTML5</text>
+    <rect x="100" width="105" height="26" rx="6" fill="#06281e" />
+    <text x="152" y="17" fill="#6ee7b7" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Custom CSS</text>
+    <rect x="215" width="115" height="26" rx="6" fill="#06281e" />
+    <text x="272" y="17" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">JavaScript</text>
+    <rect x="340" width="145" height="26" rx="6" fill="#06281e" />
+    <text x="412" y="17" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Crisis Telemetry UI</text>
+  </g>
+</svg>

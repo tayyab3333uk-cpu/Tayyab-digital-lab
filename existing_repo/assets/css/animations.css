@@ -1,0 +1,87 @@
+/* ==========================================================================
+   TAYYAB FAISAL — FULL-STACK DEVELOPER PORTFOLIO
+   Micro-Animations & Visual Dynamics (animations.css)
+   ========================================================================== */
+
+/* Subtle Floating Element */
+@keyframes floatSlow {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.anim-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Ambient Glow Breathing */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.35);
+    border-color: rgba(129, 140, 248, 0.45);
+  }
+}
+
+.anim-glow {
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+/* Glowing Border Gradient Line */
+.gradient-border-top {
+  position: relative;
+}
+
+.gradient-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-blue), var(--accent-violet), transparent);
+}
+
+/* Shimmer Highlight for Badges */
+@keyframes shimmerPass {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-badge {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.1) 0%, rgba(56, 189, 248, 0.3) 50%, rgba(56, 189, 248, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmerPass 4s infinite linear;
+}
+
+/* Terminal Scanline Overlay */
+.terminal-window::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+  background-size: 100% 4px;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Button Ripple & Hover Push */
+.btn-primary-glow:active,
+.btn-secondary-outline:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+/* Progress Fill Animation */
+@keyframes growBar {
+  from { width: 0%; }
+  to { width: 33.33%; }
+}
+
+.progress-fill.animated {
+  animation: growBar 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
